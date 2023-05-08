@@ -1,11 +1,11 @@
-package Singha.Student;
+// package Singha.Student;
 
-public class Semester extends Payment{
-    String name;
-    int year;
+// public class Semester extends Payment{
+//     String name;
+//     int year;
 
-    void seeCourse()
-    {
+//     void seeCourse()
+//     {
         
-    }
-}
+//     }
+// }

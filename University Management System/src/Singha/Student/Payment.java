@@ -1,15 +1,15 @@
-package Singha.Student;
+// package Singha.Student;
 
-public class Payment extends Student{
-    String id;
-    String name;
-    int amount;
+// public class Payment extends Student{
+//     String id;
+//     String name;
+//     int amount;
 
-    boolean payReceiveStatus()
-    {
-        return true;
-    }
+//     boolean payReceiveStatus()
+//     {
+//         return true;
+//     }
 
 
 
-}
+// }

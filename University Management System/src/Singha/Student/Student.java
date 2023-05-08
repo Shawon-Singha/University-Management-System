@@ -1,51 +1,47 @@
 package Singha.Student;
 
-import Singha.Admin.Admin;
 
-public class Student extends Admin {
+// import Singha.Admin.Admin;
+
+public class Student {
+    private String password;
+    private String StdMail;
     public String name;
     public String id;
-    private String password;
     public String gender;
     public int age;
-    private String StdMail;
 
-    void course()
-    {
+    // public Student(String name, String id, String gender, int age) {
+    //     this.name = name;
+    //     this.id = id;
+    //     this.gender = gender;
+    //     this.age = age;
+    // }
 
-    }
-
-    public void setPassword(String password)
-    {
+    public void setPassword(String password) {
         this.password = password;
     }
 
-    public void setStdMail(String StdMail)
-    {
+    public void setStdMail(String StdMail) {
         this.StdMail = StdMail;
     }
 
-    public String getPassword()
-    {
+    public String getPassword() {
         return password;
     }
 
-    public String getStdMail()
-    {
+    public String getStdMail() {
         return StdMail;
     }
 
-    public void display()
-    {
-        System.out.println("Name:"+name);
-        System.out.println("Id:"+id);
-        System.out.println("Password:"+password);
-        System.out.println("Gender:"+gender);
-        System.out.println("Age:"+age);
-        System.out.println("Student Mail:"+StdMail);
+    public void display() {
+        System.out.println("Name :" + name);
+        System.out.println("Id :" + id);
+        System.out.println("Password :" + password);
+        System.out.println("Gender :" + gender);
+        System.out.println("Age :" + age);
+        System.out.println("Student Mail :" + StdMail);
 
     }
-
-    
 
 }

@@ -6,6 +6,7 @@ import Singha.Student.*;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main() {
         System.out.println("\n\n\t\t\t\t\t\t\t***_University Management System_***\n\n");
         System.out.println("Please,Enter your choice:");
@@ -14,45 +15,53 @@ public class Main {
         System.out.println("3.Student\n");
     }
 
-    
-
     public static void main(String[] args) {
         Scanner ob = new Scanner(System.in);
 
         main();
 
-        System.out.println("Please,Enter your choice:");
+        System.out.print("Please,Enter your choice:");
         int choice = ob.nextInt();
 
         switch (choice) {
             case 3:
 
-                System.out.println("Enter your name:");
+                System.out.print("Enter your name:");
                 String name = ob.nextLine();
 
-                System.out.println("Enter your Id:");
+                String c1 = ob.nextLine();
+
+                System.out.print("Enter your Id:");
                 String id = ob.nextLine();
 
-                System.out.println("Enter your password:");
+                System.out.print("Enter your password:");
                 String password = ob.nextLine();
 
-                System.out.println("Enter your gender:");
-                String gender = ob.nextLine();
-
-                System.out.println("Enter your age:");
+                System.out.print("Enter your age:");
                 int age = ob.nextInt();
 
-                System.out.println("Enter your Studentmail");
+                System.out.print("Enter your gender:");
+                String gender = ob.next();
+
+                 String c2 = ob.nextLine();
+
+                System.out.print("Enter your Student mail");
                 String stdMail = ob.nextLine();
 
                 Student std = new Student();
+                std.name = c1;
 
+                std.gender = c2;
+                
+                std.age = age;
+                std.id = id;
                 std.setPassword(password);
                 std.setStdMail(stdMail);
 
                 std.display();
 
                 System.out.println("Your login is done.");
+                System.out.println("Welcom to Student portal.");
 
         }
     }
