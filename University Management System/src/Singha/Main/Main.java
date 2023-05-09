@@ -47,11 +47,15 @@ public class Main {
               ad.adminId = adminId;
               ad.setPass(adminPassword);
 
+              System.out.println("\n\n");
+
               ad.adminDisplay();
+              System.out.println("This info delivery through email.");
+              System.out.println("\n\n");
 
               System.out.println("What do you want?");
-               System.out.print("1.Log in");
-               System.out.print("2.Go back.");
+               System.out.println("1.Log in");
+               System.out.println("2.Go back.");
 
                System.out.print("please input your choice");
                int choice1 = ob.nextInt();
@@ -72,6 +76,10 @@ public class Main {
                     System.out.print("Enter your password:");
                     String adminpassword = ob.nextLine();
 
+                    // System.out.println(adminName);
+                    // System.out.println(adminId);
+                    // System.out.println(adminPassword);
+
                     if((adminname == adminName) && (adminid == adminId) && (adminpassword == adminPassword)) {
                         System.out.println("Your are log in successfully");
                     }
@@ -80,17 +88,16 @@ public class Main {
                         System.out.println("Log in failed");
                     }
 
+                    break;
+
 
                     case 2:
 
-
-
-
-
-
-
+                    System.out.println("Your are successfull back from this site");
+                    break;
 
                }
+               break;
                
 
 
