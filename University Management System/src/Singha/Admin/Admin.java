@@ -1,24 +1,32 @@
 package Singha.Admin;
+
 import Singha.Author.Authority;
 
-public class Admin extends Authority {
-    public String name;
-    public int id;
-    private String password;
+public class Admin implements Authority {
+    public String adminName;
+    public String adminId;
+    private String adminPassword;
 
     public void main()
     {
-       
+
     }
 
-     void setPass(String password)
+     public void setPass(String adminPassword)
     {
-       this.password = password;
+       this.adminPassword = adminPassword;
     }
 
     public String getPass()
     {
-        return password;
+        return adminPassword;
+    }
+
+    public void adminDisplay()
+    {
+        System.out.println("Name of Admin:"+adminName);
+        System.out.println("Id of Admin:"+adminId);
+        System.out.println("Password of Admin:"+adminPassword);
     }
 
     void addTeacher()
