@@ -24,13 +24,12 @@ public class Main {
         System.out.print("Please,Enter your choice:");
         int choice = ob.nextInt();
 
-        
         switch (choice) {
-            
-            case 1:
-            System.out.println("Welcome to Admin Panel");
 
-            System.out.print("Enter your name:");
+            case 1:
+                System.out.println("Welcome to Admin Panel");
+
+                System.out.print("Enter your name:");
                 String b1 = ob.nextLine();
 
                 String adminName = ob.nextLine();
@@ -43,70 +42,93 @@ public class Main {
 
                 Admin ad = new Admin();
 
-              ad.adminName = adminName;
-              ad.adminId = adminId;
-              ad.setPass(adminPassword);
+                ad.adminName = adminName;
+                ad.adminId = adminId;
+                ad.setPass(adminPassword);
 
-              System.out.println("\n\n");
+                System.out.println("\n\n");
 
-              ad.adminDisplay();
-              System.out.println("This info delivery through email.");
-              System.out.println("\n\n");
+                ad.adminDisplay();
+                System.out.println("This info delivery through email.");
+                System.out.println("\n\n");
 
-              System.out.println("What do you want?");
-               System.out.println("1.Log in");
-               System.out.println("2.Go back.");
+                System.out.println("What do you want?");
+                System.out.println("1.Log in");
+                System.out.println("2.Go back.");
 
-               System.out.print("please input your choice");
-               int choice1 = ob.nextInt();
+                System.out.print("please input your choice");
+                int choice1 = ob.nextInt();
 
-               switch(choice1){
-
+                switch (choice1) {
 
                     case 1:
+                        System.out.print("Enter your name:");
+                        String c1 = ob.nextLine();
 
-                    System.out.print("Enter your name:");
-                    String c1 = ob.nextLine();
+                        String adminname = ob.nextLine();
 
-                    String adminname = ob.nextLine();
+                        System.out.print("Enter your Id:");
+                        String adminid = ob.nextLine();
 
-                    System.out.print("Enter your Id:");
-                    String adminid = ob.nextLine();
+                        System.out.print("Enter your password:");
+                        String adminpassword = ob.nextLine();
 
-                    System.out.print("Enter your password:");
-                    String adminpassword = ob.nextLine();
+                        System.out.println(adminname);
+                        System.out.println(adminid);
+                        System.out.println(adminpassword);
 
-                    // System.out.println(adminName);
-                    // System.out.println(adminId);
-                    // System.out.println(adminPassword);
+                        System.out.println(ad.adminName);
+                        System.out.println(ad.adminId);
+                        System.out.println(ad.getPass());
 
-                    if((adminname == adminName) && (adminid == adminId) && (adminpassword == adminPassword)) {
-                        System.out.println("Your are log in successfully");
-                    }
+                        if ((adminname == ad.adminName) && (adminid == ad.adminId) && (adminpassword == ad.getPass())) {
+                            System.out.println("Login Failed");
+                        }
 
-                    else{
-                        System.out.println("Log in failed");
-                    }
+                        else {
+                            System.out.println("Your are log in successfully");
 
-                    break;
+                            System.out.println("What do you want?\n");
 
+                            System.out.println("1.Teacher info update");
+                            System.out.println("2.Student info update");
+
+                            System.out.print("Enter your choice:");
+                            int choice2 = ob.nextInt();
+
+                            switch (choice2) {
+
+                                case 1:
+                                    System.out.println("Please creat a Teacher account.");
+
+                                    System.out.print("Enter the teache's name:");
+                                    String c3 = ob.nextLine();
+
+                                    String teachername = ob.nextLine();
+
+                                    System.out.print("Enter the teacher's Id:");
+                                    String teacherid = ob.nextLine();
+
+                                    System.out.print("Enter the teacher's password:");
+                                    String teacherpassword = ob.nextLine();
+
+                                    System.out.println("The teacher's name is : " + teachername);
+                                    System.out.println("The teacher's id is :" + teacherid);
+                                    System.out.print("The teacher's password is : " + teacherpassword);
+                            }
+                        }
+
+                        break;
 
                     case 2:
 
-                    System.out.println("Your are successfull back from this site");
-                    break;
+                        System.out.println("Your are successfull back from this site");
+                        break;
 
-               }
-               break;
-               
+                }
+                break;
 
-
-              
-
-            
-            
-            
-              case 3:
+            case 3:
 
                 System.out.print("Enter your name:");
                 String c1 = ob.nextLine();
@@ -125,18 +147,18 @@ public class Main {
                 System.out.print("Enter your gender:");
                 String c2 = ob.next();
 
-                 String gender = ob.nextLine();
+                String gender = ob.nextLine();
 
                 System.out.print("Enter your Student mail:");
                 String stdMail = ob.nextLine();
 
                 System.out.println("\n\n");
 
-                Student std = new Student(name,id,gender,age);
+                Student std = new Student(name, id, gender, age);
                 std.name = name;
 
                 std.gender = gender;
-                
+
                 std.age = age;
                 std.id = id;
                 std.setPassword(password);
