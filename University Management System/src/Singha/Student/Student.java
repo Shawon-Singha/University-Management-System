@@ -1,7 +1,11 @@
 package Singha.Student;
 
 
- import Singha.Admin.Admin;
+ import java.util.Scanner;
+
+import javax.swing.Spring;
+
+import Singha.Admin.Admin;
 
 public class Student extends Admin {
     
@@ -16,7 +20,6 @@ public class Student extends Admin {
 
     public Student(String name, String id, String gender, int age) {
         this.name = name;
-        this.id = id;
         this.id = id;
         this.gender = gender;
         this.age = age;
@@ -37,6 +40,8 @@ public class Student extends Admin {
     public String getStdMail() {
         return StdMail;
     }
+
+    
 
     public void studentDisplay() {
         System.out.println("Name :" + name);

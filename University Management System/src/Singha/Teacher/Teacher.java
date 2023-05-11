@@ -4,9 +4,26 @@ import java.util.Scanner;
 import Singha.Admin.*;
 
 public class Teacher extends Admin {
-    void teacherLogin(){
-        String teacherName1;
-        String teacherpass1;
-        String teacherid1;
+    public String teachername;
+    public String teacherid;
+    private String teacherpassword;
+
+    public Teacher(String teachername , String teacherid){
+        
+        this.teachername = teachername;
+        this.teacherid = teacherid;
+    }
+
+    public void setteacherPass(String teacherpassword){
+       this.teacherpassword = teacherpassword;
+    }
+
+    public String getTpass()
+    {
+        return teacherpassword;
+    }
+
+    public void teadisplay(){
+        System.out.println("");
     }
 }

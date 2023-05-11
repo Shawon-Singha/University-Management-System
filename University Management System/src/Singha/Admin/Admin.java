@@ -21,7 +21,23 @@ public class Admin implements Authority {
         return adminPassword;
     }
 
-    public void adminDisplay() {
+    public void admin() {
+        Admin ad = new Admin();
+        Scanner ob = new Scanner(System.in);
+
+        System.out.print("Enter your name:");
+        String b1 = ob.nextLine();
+
+        String adminName = ob.nextLine();
+
+        System.out.print("Enter your Id:");
+        String adminId = ob.nextLine();
+
+        System.out.print("Enter your password:");
+        String adminPassword = ob.nextLine();
+
+
+
         System.out.println("Name of Admin:" + adminName);
         System.out.println("Id of Admin:" + adminId);
         System.out.println("Password of Admin:" + adminPassword);
@@ -39,9 +55,9 @@ public class Admin implements Authority {
     }
     public void addStudent() {
 
-        Scanner std = new Scanner(System.in);
+                                Scanner std = new Scanner(System.in);
                                 System.out.print("Enter your name:");
-                                 String c4 = std.nextLine();
+                                 
 
                                 String stdName = std.nextLine();
 
@@ -54,12 +70,10 @@ public class Admin implements Authority {
                                 System.out.print("Enter your age:");
                                 int stdAge = std.nextInt();
 
-                                System.out.print("Enter your gender:");
-                                String c2 = std.next();
-
-                                String stdGender = std.nextLine();
-
+                                
                                 System.out.print("Enter your Student mail:");
+                                String c6 = std.next();
+
                                 String stdMail = std.nextLine();
 
                                 System.out.println("\n\n"); 
@@ -68,8 +82,8 @@ public class Admin implements Authority {
             System.out.println("Student's id:"+stdId);
             System.out.println("Student's password:"+stdPassword);
             System.out.println("Student's age:"+stdAge);
-            System.out.println("Student's gender:"+stdGender);
             System.out.println("Student's mail:"+stdMail);
+            System.out.println("those info is given bt mail.");
     }
 
     }
