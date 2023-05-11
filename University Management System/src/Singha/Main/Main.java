@@ -34,7 +34,6 @@ public class Main {
                 Admin ad = new Admin();
                 ad.admin();
 
-
                 System.out.println("This info delivery through email.");
                 System.out.println("\n\n");
 
@@ -114,132 +113,116 @@ public class Main {
                                     System.out.println("2.Back in.");
 
                                     System.out.print("Enter your choice:");
-                                    
+
                                     int choice3 = ob.nextInt();
 
-                                    switch(choice3)
-                                    {
-                                        case 1: 
-                                        System.out.print("Enter the teache's name:");
-                                        String c4 = ob.nextLine();
+                                    switch (choice3) {
+                                        case 1:
+                                            System.out.print("Enter the teache's name:");
+                                            String c4 = ob.nextLine();
 
-                                        String teachername1 = ob.nextLine();
+                                            String teachername1 = ob.nextLine();
 
-                                        System.out.print("Enter the teacher's Id:");
-                                        String teacherid1 = ob.nextLine();
+                                            System.out.print("Enter the teacher's Id:");
+                                            String teacherid1 = ob.nextLine();
 
-                                        System.out.print("Enter the teacher's password:");
-                                        String teacherpassword1 = ob.nextLine();
+                                            System.out.print("Enter the teacher's password:");
+                                            String teacherpassword1 = ob.nextLine();
 
-                                        if(teachername1 == teacherid && teacherid1 == teacherid && teacherpassword1 == teacherpassword)
-                                        {
-                                            System.out.println("Log in failed.");
-                                        }
+                                            if (teachername1 == teacherid && teacherid1 == teacherid
+                                                    && teacherpassword1 == teacherpassword) {
+                                                System.out.println("Log in failed.");
+                                            }
 
-                                        else{
-                                            System.out.println("Log in successfully.");
-                                        }
-                                        break;
+                                            else {
+                                                System.out.println("Log in successfully.");
+                                            }
+                                            break;
 
-                                        case 2:
-                                        {
+                                        case 2: {
                                             System.out.println("back in successfully.");
                                         }
-                                        break;
+                                            break;
 
-                                        default:{
+                                        default: {
                                             System.out.println("Invaild.");
                                         }
-                                        break;
+                                            break;
                                     }
 
-                                 break;
+                                    break;
 
+                                case 2:
+                                    System.out.println("\n");
+                                    ad.addStudent();
 
-                                 case 2:
-                                   System.out.println("\n");
-                                   ad.addStudent();
+                                    System.out.println("\n\n");
 
-                                   System.out.println("\n\n");
+                                    System.out.print("Enter your name:");
+                                    String c4 = ob.nextLine();
 
-                                   System.out.print("Enter your name:");
-                                   String c4 = ob.nextLine();
+                                    String stdName = ob.nextLine();
 
-                                   String stdName = ob.nextLine();
+                                    System.out.print("Enter your Id:");
+                                    String stdId = ob.nextLine();
 
-                                   System.out.print("Enter your Id:");
-                                   String stdId = ob.nextLine();
+                                    System.out.print("Enter your password:");
+                                    String stdPassword = ob.nextLine();
 
-                                   System.out.print("Enter your password:");
-                                   String stdPassword = ob.nextLine();
+                                    System.out.print("Enter your age:");
+                                    int stdAge = ob.nextInt();
 
-                                   System.out.print("Enter your age:");
-                                   int stdAge = ob.nextInt();
+                                    System.out.print("Enter your Student mail:");
+                                    String c5 = ob.next();
 
-                                   System.out.print("Enter your Student mail:");
-                                   String c5 = ob.next();
+                                    String stdMail = ob.nextLine();
 
-                                   String stdMail = ob.nextLine();
+                                    System.out.println("\n\n");
 
-                                   System.out.println("\n\n");
-                                   
+                                    if (stdId == stdId && stdPassword == stdPassword) {
+                                        System.out.println("log in successfullty.");
+                                    }
 
-                                   
+                                    else {
+                                        System.out.println("log in failed");
+                                    }
+                                    break;
 
-                                   if(stdId == stdId && stdPassword == stdPassword){
-                                    System.out.println("log in successfullty.");
-                                   }
-                                   
-                                   else{
-                                    System.out.println("log in failed");
-                                   }
-                                   break;
-                                      
                             }
                         }
-
-                        break;
 
                     case 2:
 
                         System.out.println("Your are successfull back from this site");
                         break;
-
                 }
+
                 break;
 
-
             case 2:
-                    System.out.print("Enter the teache's name:");
-                    String c4 = ob.nextLine();
+                System.out.print("Enter the teache's name:");
+                String c4 = ob.nextLine();
 
-                    String teachername = ob.nextLine();
+                String teachername = ob.nextLine();
 
-                    System.out.print("Enter the teacher's Id:");
-                    String teacherid = ob.nextLine();
+                System.out.print("Enter the teacher's Id:");
+                String teacherid = ob.nextLine();
 
-                    System.out.print("Enter the teacher's password:");
-                    String teacherpassword = ob.nextLine();
+                System.out.print("Enter the teacher's password:");
+                String teacherpassword = ob.nextLine();
 
-                    System.out.println("\n\n");
+                System.out.println("\n\n");
 
-                    Teacher tea = new Teacher(teachername, teacherid);
+                Teacher tea = new Teacher(teachername, teacherid);
 
-                    tea.teachername = teachername;
-                    tea. teacherid  = teacherid;
+                tea.teachername = teachername;
+                tea.teacherid = teacherid;
 
-                    tea.setteacherPass(teacherpassword);
+                tea.setteacherPass(teacherpassword);
 
-                    if(teacherpassword == teacherpassword){
-                        System.out.println("log in successfully");
-                    }
-
-                    
-
-
-
-                    
-
+                if (teacherpassword == teacherpassword) {
+                    System.out.println("log in successfully");
+                }
 
             case 3:
 
