@@ -4,6 +4,7 @@ package Singha.Student;
  import Singha.Admin.Admin;
 
 public class Student extends Admin {
+    
     private String password;
     private String StdMail;
     
@@ -46,5 +47,6 @@ public class Student extends Admin {
         System.out.println("Student Mail :" + StdMail);
 
     }
+}  
 
-}
+
