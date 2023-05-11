@@ -13,13 +13,17 @@ public class Main {
         System.out.println("Please,Enter your choice:");
         System.out.println("1.Admin");
         System.out.println("2.Teacher");
-        System.out.println("3.Student\n");
+        System.out.println("3.Student");
+        System.out.println("4.exit\n");
     }
 
     public static void main(String[] args) {
         Scanner ob = new Scanner(System.in);
+        boolean result = true;
 
-        main();
+        while(result)
+        {
+            main();
 
         System.out.print("Please,Enter your choice:");
         int choice = ob.nextInt();
@@ -37,7 +41,7 @@ public class Main {
                 System.out.println("This info delivery through email.");
                 System.out.println("\n\n");
 
-                System.out.println("What do you want?");
+                System.out.println("What do you want?\n");
                 System.out.println("1.Log in");
                 System.out.println("2.Go back.\n\n");
 
@@ -49,8 +53,14 @@ public class Main {
                 switch (choice1) {
 
                     case 1:
+
+                        Admin adm = new Admin();
+                        adm.admin();
+                        System.out.println("\n\n");
+
+
                         System.out.print("Enter your name:");
-                        String c1 = ob.nextLine();
+                        String c1 = ob.next();
 
                         String adminname = ob.nextLine();
 
@@ -60,15 +70,11 @@ public class Main {
                         System.out.print("Enter your password:");
                         String adminpassword = ob.nextLine();
 
-                        // System.out.println(adminname);
-                        // System.out.println(adminid);
-                        // System.out.println(adminpassword);
+                        System.out.println(adminname);
+                        System.out.println(adminid);
+                        System.out.println(adminpassword); 
 
-                        // System.out.println(ad.adminName);
-                        // System.out.println(ad.adminId);
-                        // System.out.println(ad.getPass());
-
-                        if ((adminname == ad.adminName) && (adminid == ad.adminId) && (adminpassword == ad.getPass())) {
+                        if ((adminname.equals(ad.adminName)) && (adminid.equals(ad.adminId)) && (adminpassword.equals(ad.getPass()))) {
                             System.out.println("Login Failed");
                         }
 
@@ -78,7 +84,7 @@ public class Main {
                             System.out.println("What do you want?\n");
 
                             System.out.println("1.Teacher info update");
-                            System.out.println("2.Student info update");
+                            System.out.println("2.Student info update\n");
 
                             System.out.print("Enter your choice:");
                             int choice2 = ob.nextInt();
@@ -86,10 +92,10 @@ public class Main {
                             switch (choice2) {
 
                                 case 1:
-                                    System.out.println(" Creat a Teacher account.");
+                                    System.out.println(" Creat a Teacher account.\n");
 
                                     System.out.print("Enter the teache's name:");
-                                    String c3 = ob.nextLine();
+                                    String c3 = ob.next();
 
                                     String teachername = ob.nextLine();
 
@@ -118,6 +124,7 @@ public class Main {
 
                                     switch (choice3) {
                                         case 1:
+                                            System.out.println("Welcome to Teacher portal.");
                                             System.out.print("Enter the teache's name:");
                                             String c4 = ob.nextLine();
 
@@ -129,8 +136,8 @@ public class Main {
                                             System.out.print("Enter the teacher's password:");
                                             String teacherpassword1 = ob.nextLine();
 
-                                            if (teachername1 == teacherid && teacherid1 == teacherid
-                                                    && teacherpassword1 == teacherpassword) {
+                                            if (teachername1.equals(teacherid) && teacherid1.equals(teacherid)
+                                                    && teacherpassword1.equals(teacherpassword)) {
                                                 System.out.println("Log in failed.");
                                             }
 
@@ -153,13 +160,14 @@ public class Main {
                                     break;
 
                                 case 2:
+                                     System.out.println("welcome to student panel");
                                     System.out.println("\n");
                                     ad.addStudent();
 
                                     System.out.println("\n\n");
 
                                     System.out.print("Enter your name:");
-                                    String c4 = ob.nextLine();
+                                    String c4 = ob.next();
 
                                     String stdName = ob.nextLine();
 
@@ -179,7 +187,7 @@ public class Main {
 
                                     System.out.println("\n\n");
 
-                                    if (stdId == stdId && stdPassword == stdPassword) {
+                                    if (stdId.equals(stdId) && stdPassword.equals(stdPassword)) {
                                         System.out.println("log in successfullty.");
                                     }
 
@@ -220,14 +228,14 @@ public class Main {
 
                 tea.setteacherPass(teacherpassword);
 
-                if (teacherpassword == teacherpassword) {
+                if (teacherpassword.equals(teacherpassword)) {
                     System.out.println("log in successfully");
                 }
 
             case 3:
 
                 System.out.print("Enter your name:");
-                String c1 = ob.nextLine();
+                String c1 = ob.next();
 
                 String name = ob.nextLine();
 
@@ -265,7 +273,26 @@ public class Main {
                 System.out.println("Your login is done.");
                 System.out.println("Welcom to Student portal.");
 
+                break;
+
+
+            case 4:
+              System.out.println("You are exiting from this panel.");
+              System.out.println("Thank you for visiting out panel.");
+
+              result = false;
+              break;
+
+
+              default:
+              System.out.println("invaild input");
+              break;
+
         }
+
+        }
+    ob.close();
+    
     }
 
 }

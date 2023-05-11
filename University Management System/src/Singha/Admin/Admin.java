@@ -26,7 +26,7 @@ public class Admin implements Authority {
         Scanner ob = new Scanner(System.in);
 
         System.out.print("Enter your name:");
-        String b1 = ob.nextLine();
+        String b1 = ob.next();
 
         String adminName = ob.nextLine();
 
@@ -38,14 +38,12 @@ public class Admin implements Authority {
 
 
 
-        System.out.println("Name of Admin:" + adminName);
+        System.out.println("\nName of Admin:" + adminName);
         System.out.println("Id of Admin:" + adminId);
         System.out.println("Password of Admin:" + adminPassword);
     }
 
-    /**
-     * 
-     */
+    
     public void addTeacher() {
         String teacherName1;
         String teacherpass1;
