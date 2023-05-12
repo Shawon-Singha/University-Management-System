@@ -1,22 +1,20 @@
 package Singha.Student;
 
-
- import java.util.Scanner;
+import java.util.Scanner;
 
 import javax.swing.Spring;
 
 import Singha.Admin.Admin;
 
 public class Student extends Admin {
-    
+
     private String password;
     private String StdMail;
-    
+
     public String name;
     public String id;
     public String gender;
     public int age;
-    
 
     public Student(String name, String id, String gender, int age) {
         this.name = name;
@@ -41,8 +39,6 @@ public class Student extends Admin {
         return StdMail;
     }
 
-    
-
     public void studentDisplay() {
         System.out.println("Name :" + name);
         System.out.println("Id :" + id);
@@ -52,6 +48,4 @@ public class Student extends Admin {
         System.out.println("Student Mail :" + StdMail);
 
     }
-}  
-
-
+}

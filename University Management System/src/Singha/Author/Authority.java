@@ -1,6 +1,6 @@
 package Singha.Author;
 
-public interface Authority {
+public abstract class Authority {
     
     public abstract void main();
 }
