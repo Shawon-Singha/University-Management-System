@@ -8,7 +8,6 @@ public class Section extends Admin {
     public static String secName;
     public static String classTime;
     public static int roomNumber;
-    public static String semeSter;
 
     public static void sectionDisplay() {
         Scanner ob = new Scanner(System.in);
@@ -22,22 +21,20 @@ public class Section extends Admin {
         System.out.println("Enter your classNumber:");
         int roomnumber = ob.nextInt();
 
-        System.out.println("Enter the semester:");
-        String semester = ob.nextLine();
 
         secName = secname;
         classTime = classtime;
         roomNumber = roomnumber;
-        semeSter = semester;
+       
 
     }
 
     public static void Display() {
 
-        System.out.print("Section name is :" + secName);
-        System.out.print("Class time is :" + classTime);
-        System.out.print("Section Number is :" + roomNumber);
-        System.out.print("Semester is :" + semeSter);
+        System.out.println("Section name is :" + secName);
+        System.out.println("Class time is :" + classTime);
+        System.out.println("Section Number is :" + roomNumber);
+       
     }
 
 }
