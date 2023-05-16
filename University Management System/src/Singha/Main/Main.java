@@ -30,7 +30,7 @@ public class Main {
             switch (choice) {
 
                 case 1:
-                    System.out.println("Welcome to Admin Panel");
+                    System.out.println("\nWelcome to Admin Panel");
 
                     System.out.println("\n");
 
@@ -47,13 +47,13 @@ public class Main {
                     System.out.print("please input your choice:");
                     int choice1 = ob.nextInt();
 
-                    System.out.println("\n\n");
+                    System.out.println("\n");
 
                     switch (choice1) {
 
                         case 1:
                             
-                            System.out.println("\n\n");
+                            System.out.println("\n");
 
                             
 
@@ -212,7 +212,7 @@ public class Main {
                     System.out.print("Enter the teacher's password:");
                     String teacherpassword = ob.nextLine();
 
-                    System.out.println("\n\n");
+                    System.out.println("\n");
 
                     Teacher tea = new Teacher(teachername, teacherid);
 

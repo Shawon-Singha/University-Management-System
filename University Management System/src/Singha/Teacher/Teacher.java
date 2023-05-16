@@ -23,7 +23,4 @@ public class Teacher extends Admin {
         return teacherpassword;
     }
 
-    public void teadisplay() {
-        System.out.println("");
-    }
 }

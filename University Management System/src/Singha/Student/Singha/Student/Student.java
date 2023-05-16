@@ -2,9 +2,7 @@ package Singha.Student;
 
 import java.util.Scanner;
 
-import javax.swing.Spring;
 
-import Singha.Admin.Admin;
 
 public class Student extends Admin {
 

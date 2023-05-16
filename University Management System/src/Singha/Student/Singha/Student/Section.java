@@ -2,8 +2,6 @@ package Singha.Student;
 
 import java.util.Scanner;
 
-import Singha.Admin.Admin;
-
 public class Section extends Admin {
     public static String secName;
     public static String classTime;
@@ -12,13 +10,13 @@ public class Section extends Admin {
     public static void sectionDisplay() {
         Scanner ob = new Scanner(System.in);
 
-        System.out.println("Enter the section name:");
+        System.out.print("Enter the section name:");
         String secname = ob.nextLine();
 
-        System.out.println("Your class time:");
+        System.out.print("Your class time:");
         String classtime = ob.nextLine();
 
-        System.out.println("Enter your classNumber:");
+        System.out.print("Enter your classNumber:");
         int roomnumber = ob.nextInt();
 
 
